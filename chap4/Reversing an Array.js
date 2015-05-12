@@ -26,34 +26,3 @@ function reverseInPlace(arr){
 console.log(reverseInPlace([3,55,"q","b", false]));
 
 
-//Array to List
-
-
-function arrayToList(arr) {
-  var list = null;
-  for (var i = arr.length - 1; i >= 0; i--)
-    list = {value: arr[i], rest: list};
-  return list;
-}
-
-
-var hi = {
-	value: 1,
-	rest: {
-		value: 2,
-		rest: {
-			value: 3,
-			rest: null
-		}
-	}
-}
-
-function listToArray(list) {
-	var arr = [];
-	for (var node = list; node; node = node.rest) {
-		arr.push(node.value);
-	}
-	return arr;
-}
-
-listToArray(hi)
